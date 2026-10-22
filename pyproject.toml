@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meitei-calendar-engine"
+version = "1.0.0"
+description = "Generate Meitei (Manipuri) lunisolar calendar years from astronomy — no lookup tables. Reverse-engineered rule, validated against printed almanacs and published calendars over ~7,300 days (2002-2030)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "LGPL-3.0-or-later" }
+authors = [
+    { name = "Banishwor Athokpam" },
+]
+keywords = ["meitei", "manipuri", "calendar", "panchang", "lunisolar", "astronomy", "thaban"]
+dependencies = [
+    "skyfield>=1.48",
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/banishwor/meitei-calendar-engine"
+
+[project.scripts]
+meitei-calendar = "meitei_calendar.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["meitei_calendar*"]
