@@ -27,7 +27,7 @@ not a table lookup.
 ## The author's apps
 
 - **Android:** [Manipuri Calendar](https://play.google.com/store/apps/details?id=com.manipurcalendar) on Google Play
-- **Web (PWA):** [manipuri-calendar-pwa](https://github.com/banishwor/manipuri-calendar-pwa)
+- **Web (PWA):** [Manipuri Calendar — open the live app](https://banishwor.github.io/manipuri-calendar-pwa/)
 
 ## Output
 
