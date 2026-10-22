@@ -24,6 +24,11 @@ On first use the JPL DE421 ephemeris (~17 MB) is downloaded once into
 Generating one year takes a minute or two — it is a full ephemeris scan,
 not a table lookup.
 
+## The author's apps
+
+- **Android:** [Manipuri Calendar](https://play.google.com/store/apps/details?id=com.manipurcalendar) on Google Play
+- **Web (PWA):** [manipuri-calendar-pwa](https://github.com/banishwor/manipuri-calendar-pwa)
+
 ## Output
 
 Each day record: `gregorian` date, `month` (SAJIBU … LAMTA), `day`
@@ -61,17 +66,23 @@ published calendars and verified day-by-day (scorecard below):
 
 ## Validation
 
-The rule was tested against three independent published sources,
+The rule was tested against four independent published sources,
 spanning 2002–2030, before this library was packaged:
 
 | Source | Range | Days | Exact match |
 |---|---|---|---|
 | manipuricalendar.in (computed panchang) | 2024–2028 | 1,827 | **100%** |
+| Manipuri Calendar web calendar (publisher's site) | 2026 | 365 | **100%** |
 | Kumsing app (Kangla Labs) published dates | 2024–2030 | 2,557 | 99.57% |
 | e-pao printed calendar archives | 2002–2010 | 3,287 | 91.85% |
 
 Notes on the differences, because they are the interesting part:
 
+- **Manipuri Calendar web calendar:** all 365 day labels of 2026 match.
+  Its grid annotates 14 pair days where this engine produces 16; on the
+  two un-annotated days the labels are still identical — a display
+  difference, not a date difference. (On 23 May 2026 it shows a pair day
+  that Kumsing's data lacks, agreeing with this engine.)
 - **Kumsing:** all 11 differing days are ±1 within a ~4-minute window
   around sunrise — Kumsing reads the tithi at the earlier civil sunrise.
   On the 6 days where Kumsing and manipuricalendar.in disagree with each
