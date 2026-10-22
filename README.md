@@ -61,15 +61,14 @@ published calendars and verified day-by-day (scorecard below):
 
 ## Validation
 
-The rule was tested against four independent sources, ~7,300 days,
-2002–2030, before this library was packaged:
+The rule was tested against three independent published sources,
+spanning 2002–2030, before this library was packaged:
 
 | Source | Range | Days | Exact match |
 |---|---|---|---|
 | manipuricalendar.in (computed panchang) | 2024–2028 | 1,827 | **100%** |
-| Kumsing app (Kangla Labs) bundled database | 2024–2030 | 2,557 | 99.57% |
+| Kumsing app (Kangla Labs) published dates | 2024–2030 | 2,557 | 99.57% |
 | e-pao printed calendar archives | 2002–2010 | 3,287 | 91.85% |
-| Author's PWA tables | 2026–2027 | 730 | except 3 slips in those tables |
 
 Notes on the differences, because they are the interesting part:
 

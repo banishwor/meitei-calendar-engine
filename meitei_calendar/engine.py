@@ -1,7 +1,7 @@
 """Astronomy core for the Meitei (Manipuri) calendar.
 
-The rule (reverse-engineered and verified against four independent sources
-over ~7,300 days, 2002-2030 — see README.md):
+The rule (reverse-engineered and verified against published sources
+over 2002-2030 — see README.md):
 
 - A civil day's Meitei date is the tithi prevailing at sunrise in Imphal,
   where the tithi is the GEOCENTRIC Moon-Sun elongation (classical panchang
