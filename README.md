@@ -38,6 +38,42 @@ on pair days, `day` is a two-element list like `[30, 1]`. With `--rich`
 you also get `intercalary` (the day belongs to an adhik month) and
 `merged` (the kshaya tithis merged into that civil day).
 
+## Hosted calendar data
+
+Pre-computed calendar files for **2020–2035** live in this repository's
+[`data/`](data/) directory — one JSON file per Gregorian year, in the
+PWA/Android format described under [Output](#output) above:
+
+```
+data/calendar_2020.json
+data/calendar_2021.json
+...
+data/calendar_2035.json
+```
+
+The [Manipuri Calendar Android app](https://play.google.com/store/apps/details?id=com.manipurcalendar)
+and the [PWA](https://banishwor.github.io/manipuri-calendar-pwa/) fetch
+a year on demand instead of bundling tables, so past and future years
+stay available and can be corrected in one place. Each raw file is
+accessible at:
+
+- **GitHub Raw:**
+  `https://raw.githubusercontent.com/banishwor/meitei-calendar-engine/main/data/calendar_{year}.json`
+- **jsDelivr CDN:**
+  `https://cdn.jsdelivr.net/gh/banishwor/meitei-calendar-engine@main/data/calendar_{year}.json`
+
+For example, the 2026 file is at
+`https://raw.githubusercontent.com/banishwor/meitei-calendar-engine/main/data/calendar_2026.json`
+and at
+`https://cdn.jsdelivr.net/gh/banishwor/meitei-calendar-engine@main/data/calendar_2026.json`.
+
+To regenerate the hosted files (or extend the range), run:
+
+```bash
+python scripts/generate_all.py                    # 2020–2035 into data/
+python scripts/generate_all.py --start 2036 --end 2040
+```
+
 ## The rule
 
 The engine implements the traditional rule, reverse-engineered from
