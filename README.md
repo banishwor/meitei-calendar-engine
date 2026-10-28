@@ -133,8 +133,14 @@ Notes on the differences, because they are the interesting part:
 ## Known limitations
 
 - A lunation containing *two* sankrantis (kshaya masa, a skipped month)
-  does not occur anywhere in 2002–2030. The engine implements the naming
-  rule for it but flags such a month `KSHAYA?` — that path is untested.
+  does not occur anywhere in 2002–2030. The engine flags such a month
+  `KSHAYA?`. Exactly one occurs in the hosted 1950–2099 data: the
+  lunation 16 Dec 1982 – 14 Jan 1983 contains both the Dhanu and Makara
+  sankrantis. By the maintainer's decision (28 Oct 2026) the hosted data
+  names that month `POINU-WAKCHING` — both month names joined, the
+  classical panchanga convention for a kshaya month. Regenerating the
+  data with the engine restores the `KSHAYA?` flag for that lunation;
+  rename it the same way afterwards.
 - Sankranti times are resolved on a 2-hour grid. Month naming only needs
   to know which lunation contains an ingress, so this is sufficient —
   but don't use this library for precise sankranti *times*.
