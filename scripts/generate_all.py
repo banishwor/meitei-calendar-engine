@@ -18,7 +18,7 @@ Manipuri Calendar Android app and PWA on demand via GitHub Raw and
 the jsDelivr CDN (see README.md, "Hosted calendar data").
 
 Usage:
-    python scripts/generate_all.py                  # 2020-2035 -> data/
+    python scripts/generate_all.py                  # 1950-2099 -> data/
     python scripts/generate_all.py --start 2024 --end 2030
     python scripts/generate_all.py --years 2026 2027
     python scripts/generate_all.py --skip-existing  # resume an interrupted run
@@ -38,8 +38,8 @@ if str(REPO_ROOT) not in sys.path:
 from meitei_calendar import generate_year          # noqa: E402
 from meitei_calendar.generator import to_pwa       # noqa: E402
 
-DEFAULT_START = 2020
-DEFAULT_END = 2035
+DEFAULT_START = 1950
+DEFAULT_END = 2099
 
 
 def generate_one(year: int, out_dir: Path) -> Path:

@@ -40,15 +40,15 @@ you also get `intercalary` (the day belongs to an adhik month) and
 
 ## Hosted calendar data
 
-Pre-computed calendar files for **2020–2035** live in this repository's
+Pre-computed calendar files for **1950–2099** live in this repository's
 [`data/`](data/) directory — one JSON file per Gregorian year, in the
 PWA/Android format described under [Output](#output) above:
 
 ```
-data/calendar_2020.json
-data/calendar_2021.json
+data/calendar_1950.json
+data/calendar_1951.json
 ...
-data/calendar_2035.json
+data/calendar_2099.json
 ```
 
 The [Manipuri Calendar Android app](https://play.google.com/store/apps/details?id=com.manipurcalendar)
@@ -70,8 +70,8 @@ and at
 To regenerate the hosted files (or extend the range), run:
 
 ```bash
-python scripts/generate_all.py                    # 2020–2035 into data/
-python scripts/generate_all.py --start 2036 --end 2040
+python scripts/generate_all.py                    # 1950–2099 into data/
+python scripts/generate_all.py --start 2100 --end 2105
 ```
 
 ## The rule
